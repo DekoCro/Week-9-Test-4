@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.2em;
+}
+
+body {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.25em 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+nav.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+nav.menu a {
+    padding: 0.5em 1em;
+    transition: all 0.5s ease;
+}
+nav.menu a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.page {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-home {
+    text-align: center;
+    align-items: center;
+}
+.page-home img {
+    width: 15em;
+}
+.page-home h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+.page-home a.report {
+    display: block;
+    padding: 0.5em 1em;
+    margin: 2em;
+    border: 1px solid #ffffff;
+    border-radius: 0.5em;
+    transition: all 0.5s ease;
+}
+.page-home a.report:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.page-home .heroes {
+    display: flex;
+    justify-content: space-around;
+    align-self: stretch;
+}
+.page-home .heroes a {
+    width: 5em;
+    height: 5em;
+    overflow: hidden;
+    position: relative;
+}
+.page-home .heroes a img {
+    position: absolute;
+    top: -0.25em;
+    left: 0;
+    width: 100%;
+}
+
+.page-hero .info .portrait {
+    float: left;
+    margin: 0 1em 1em 0;
+    width: 10em;
+}
+.page-hero .info h1 {
+    font-size: 3em;
+    margin: 0 0 0.25em 0;
+}
+.page-hero .availability {
+    margin-top: 1em;
+}
+
+
+.emergency-report {
+    margin-top: 1em;
+}
+.emergency-report form {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+.emergency-report form input[type="text"],
+.emergency-report form textarea {
+    font-family: 'Architects Daughter', cursive;
+    border-width: 0;
+    padding: 0.5em 0.5em;
+    border-radius: 0.25em;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0.5em 0;
+    min-width: 400px;
+}
+.emergency-report form input[type="submit"] {
+    font-family: 'Architects Daughter', cursive;
+    border-width: 0;
+    padding: 0.5em 0.5em;
+    border-radius: 0.25em;
+    background-color: #500c0c;
+    color: #ffffff;
+}
