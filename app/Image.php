@@ -6,8 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
 {
-    // public function heroes()
-    // {
-    //     return $this->belongsToMany('App\Hero');
-    // }
+    
 }
