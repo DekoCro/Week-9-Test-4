@@ -12,7 +12,7 @@
 <body>
 
     <nav class="menu">
-        <a href="#">Home</a>
+        <a href="{{ route('homepage')}}">Home</a>
         @guest
             <a href="{{ route('login') }}">Login</a>
             <a href="{{ route('register') }}">Register</a>

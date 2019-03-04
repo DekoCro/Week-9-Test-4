@@ -28,6 +28,7 @@
         <h2>Report an emergency</h2>
 
         <form action="" method="post">
+            @csrf
 
             <input type="text" name="subject" placeholder="Cause of emergency">
 
