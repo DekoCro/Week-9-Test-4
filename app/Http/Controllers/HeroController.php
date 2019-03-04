@@ -32,28 +32,29 @@ class HeroController extends Controller
 
     public function create()
     {
-        $emergency = new Emergency;
+        //$emergency = new Emergency;
         
-        //return view('hero/show', compact('emergency'));
-        return redirect()->route('homepage');
+        return view('hero/show', compact('emergency'));
+        
     }
 
-    public function store(Request $request, $id)
+    public function store(Request $request)//, $id)
     {
         $emergency = new Emergency;
 
-        $hero = Hero::findOrFail($id);
+        $hero = Hero::findOrFail(1);
 
         $emergency->fill($request->only([
             'subject', 
             'description'
         ]));
-        $emergency->hero_id = $hero->id;
+
+        //$emergency->hero_id = $hero->id;
 
         $emergency->save();
 
         session()->flash('success_message', 'Success!');
 
-        return redirect()->route('emergency.create' , ['hero_slug' => $hero->name]);
+        return redirect()->route('show', ['hero_slug' => $hero->name]);
     }
 }
